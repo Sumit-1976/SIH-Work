@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="registration2.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>Case Registration</header>
+
+        <form id="cregistrationform">
+            <div class="details personal">
+                <span class="title">Personal Details</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Full Name</label> 
+                        <input id="name" type="text" placeholder="Enter your name" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Date of Birth</label> 
+                        <input id="dob" type="date" placeholder="Enter Birth Date" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email</label> 
+                        <input id="email" type="text" placeholder="Enter your email" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Mobile Number</label> 
+                        <input id="mnum" type="number" placeholder="Enter mobile number" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Gender</label>
+                        <select id="gen" name="gender" placeholder="Gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                          
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Occupation</label> 
+                        <input id="occupation" type="text" placeholder="Enter your occupation" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Password</label> 
+                        <input id="password" type="password" placeholder="Enter password" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Confirm Password</label> 
+                        <input id="password2" type="password" placeholder="Confirm Password" required>
+                        <div class="error"></div>
+                    </div>
+
+                </div>
+                
+            </div>
+
+            <div class="details ID">
+                <span class="title">Identity Details</span> 
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>ID Type</label> 
+                        <input id="idtype" type="text" placeholder="Enter ID type" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>ID Number</label> 
+                        <input id="idnum" type="number" placeholder="Enter ID number" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="state">ID Issued State</label> 
+                        <select id="istate" required>
+                            <option value="">---Select State---</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli</option>
+                            <option value="DD">Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+
+
+                    <div class="input-field">
+                        <label for="document">Upload Identity Proof (PDF only)</label>
+                        <input type="file" id="document" name="document" accept=".pdf" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="document">Upload your Photo</label>
+                        <input type="file" id="photo" name="photo" accept=".jpg, .jpeg" required>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="document">Upload photo of your signature</label>
+                        <input type="file" id="sign" name="sign" accept=".jpg, .jpeg" required>
+                        <div class="error"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details ID">
+                <span class="title">Address Details</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label for="state">State</label> 
+                        <select id="state" onchange="populateDistricts()" required>
+                            <option value="">---Select State---</option>
+                            <option value="AN">Andaman and Nicobar Islands</option>
+                            <option value="AP">Andhra Pradesh</option>
+                            <option value="AR">Arunachal Pradesh</option>
+                            <option value="AS">Assam</option>
+                            <option value="BR">Bihar</option>
+                            <option value="CH">Chandigarh</option>
+                            <option value="CT">Chhattisgarh</option>
+                            <option value="DN">Dadra and Nagar Haveli</option>
+                            <option value="DD">Daman and Diu</option>
+                            <option value="DL">Delhi</option>
+                            <option value="GA">Goa</option>
+                            <option value="GJ">Gujarat</option>
+                            <option value="HR">Haryana</option>
+                            <option value="HP">Himachal Pradesh</option>
+                            <option value="JK">Jammu and Kashmir</option>
+                            <option value="JH">Jharkhand</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="KL">Kerala</option>
+                            <option value="LA">Ladakh</option>
+                            <option value="LD">Lakshadweep</option>
+                            <option value="MP">Madhya Pradesh</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="MN">Manipur</option>
+                            <option value="ML">Meghalaya</option>
+                            <option value="MZ">Mizoram</option>
+                            <option value="NL">Nagaland</option>
+                            <option value="OR">Odisha</option>
+                            <option value="PY">Puducherry</option>
+                            <option value="PB">Punjab</option>
+                            <option value="RJ">Rajasthan</option>
+                            <option value="SK">Sikkim</option>
+                            <option value="TN">Tamil Nadu</option>
+                            <option value="TG">Telangana</option>
+                            <option value="TR">Tripura</option>
+                            <option value="UP">Uttar Pradesh</option>
+                            <option value="UT">Uttarakhand</option>
+                            <option value="WB">West Bengal</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label for="district">District</label> 
+                        <select id="district" required>
+                            <option value="">---Select District---</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Address</label> 
+                        <input type="text" placeholder="Enter your Address" required>
+                        <div class="error"></div>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <div class="button">
+                    <button class="submit">
+                    <span class="submit">Submit</span>
+                    <i class="uil uil-navigator"></i>
+                    </button>
+                </div>
+
+            
+        </form>
+    </div>
+
+
+    <script src="data.js"></script>
+    <script src="registration2.js"></script>
+    
+    
+</body>
+</html>
